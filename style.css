@@ -1,9 +1,14 @@
-h1{
-    /* google font 1 */
-    font-family: 'Tangerine', cursive;
-    font-size: 20px;
-}
+/*
+Page styling ------------------------------------------------------
+*/
 
+    /* Remove default styling*/
+*{
+    margin: 3;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 
 .header {
     width: 100%;
@@ -13,6 +18,15 @@ h1{
     color: #6A3F3F;
 }
 
+h1{
+    /* google font 1 */
+    font-family: 'Tangerine', cursive;
+    font-size: 20px;
+}
+
+h4{
+    font-size: 20px;
+}
 
 h6{
     /* google font 2 */
@@ -21,16 +35,132 @@ h6{
     margin-top: 0px;
     margin-bottom: 10px;
 }
+p{
+    font-size: 18px;
+}
+
+p1{
+    font-size: 14px;
+}
+
+form {
+    margin: 2rem 0;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Gayathri', sans-serif;
+}
+
+label {
+    padding-top: 2px;
+}
+
+.couples-details{
+    font-family: 'Gayathri', sans-serif;
+    text-transform: uppercase;
+}
 
 
-/* Dropdown Button */
-.dropbtn {
-    background-color: #6A3F3F;
-    color: #EFE1E1;
+
+  /*
+Page styling ------------------------------------------------------
+*/
+
+
+
+/*
+  Applying styling to slider
+  */
+  
+  .carousel-container{
+    position: relative;
+    height: 500px;
+    width: auto;
+    margin: auto;
     padding: 10px;
-    font-size: 16px;
-    border: none;
+    overflow: hidden;
+  }
+  img.event-photos{
+    max-width: 400px;
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+  }
+  .carousel-slide{
+    display: flex;
+    width: auto;
+    height: 100%;
+  }
+
+  .carousel-buttons {
+    position: center;
+    
+  }
+  /*
+  Finished slider styling
+  */
+
+
+/*
+  Applying styling to additional photos
+  */
+
+
+#additional-photos img{
+    position: relative;
+    max-height: 300px;
+    margin: 5px;
+
+}
+
+/*
+Finished additional photos styling
+*/
+
+
+
+
+
+  
+  
+  
+  
+  /*
+  Applying styling for dark mode
+  */
+  
+  #dark-change{
+    position: absolute;
+    width: 45px;
+    height: 22px;
+    right: 20px;
+    top: 20px;
+    border: 2px solid #6A3F3F;
+    border-radius: 20px;
+  }
+  
+  #dark-change::before{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 17px;
+    left: 1px;
+    top: 0.5px;
+    border-radius: 50%;
     cursor: pointer;
+    background: #6A3F3F;
+    transition: 0.4s;
+  }
+  
+  #dark-change.active::before{
+    left: 24px;
+    background-color: #fff;
+  }
+  
+  body.night{
+    background: #000;
+    color: #EFE1E1;
   }
   
   #night-mode-button {
@@ -44,48 +174,10 @@ h6{
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-  /* Dropdown button on hover & focus */
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-  }
+  /*
+  Finished styling for dark mode
+  */
   
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
   
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
   
-  /* Links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd}
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;}
+

@@ -20,8 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
-    <!-- font-family: 'Gayathri', sans-serif;
-    font-family: 'Mrs Saint Delafield', cursive; -->
+    <!-- font-family: 'Gayathri', sans-serif; -->
 
 
     <!-- google font #4 -->
@@ -39,46 +38,79 @@
   <body>
    
     <!-- let's put a banner up here -->
-        <!-- I would also LOVE to try a drop-down menu -->
+    <!-- I would also LOVE to try a drop-down menu -->
     <section class="header">
         <h6>Jordan and Haala's Pretty Website</h6>
         <div>
             <!-- add the menu bar here, like we did with the happy poster -->
         </div>
         
-        <!-- I would like this dropdown menu to present itself in a mobile view -->
-        <!-- <div class="dropdown">
-            <button class="dropbtn">Dropdown</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-            </div>
-        </div> -->
     </section>
-
-
-   <button id ="night-mode-button">Dark Mode</button>
-
 
     <main>
         <h1>Welcome to Our Website</h1>  
     </main>
 
-    <section class="photo-banner"> 
+
+    <!--Added HTML to house dark mode btn-->
+    <label id="dark-change"></label>
+    
+  
+    <!--Added HTML to house perpetual slider of images-->
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img class = "event-photos" id="last-clone" alt="A picture of a happily married couple.">
+            <img class = "event-photos" id="img-1" alt="A picture of a happily married couple.">
+            <img class = "event-photos" id="img-2" alt="A picture of a happily married couple.">
+            <img class = "event-photos" id="img-3" alt="A picture of a happily married couple.">
+            <img class = "event-photos" id="img-4" alt="A picture of a happily married couple.">
+            <img class = "event-photos" id="first-clone" alt="A picture of a happily married couple.">
+    
+        </div>
+
+    </div>
+   
+    <section class="carousel-buttons"> 
+        <button id="prevBtn">Scroll Left</button>
+        <button id="nextBtn">Scroll Right</button>
+    </section>
+
+
+    <!-- Couples Info -->
+    <section class="couples-details">
+        <h4 class="event-name">Event Name</h4>
+        <p class="event-description">Event Description</p>
+        <p1 class="event-location">Event Location</p1>
+        <div id="additional-photos">
+            <!-- Couples photos here, would like a hover option but that seems a but intense -->
+        </div>
         
-        <!-- try array here, every time the page loads, there can be different pics here -->
-        <!-- also try to do the rotating -->
-        <!-- click on each photo and let there be info, description, venu locaton, soem vendors -->
     </section>
 
 
 
-    <section class="input-field">
 
-    <!--email list /contact info input here -->
-    <!--name of client, email of client, comment area, optional instagram handle of client-->
+
+
+    <section class="form"> 
+        <!-- New Client Form -->
+        <form id="new-client">
+            <h4>REACH OUT TO US:</h4>
+            <label for="name">NAME: </label>
+            <input type="text" name="name" id="client-name" />
+            <label for="email">EMAIL: </label>
+            <input type="text" name="email" id="client-email" />
+            <label for="number">NUMBER: </label>
+            <input type="text" name="number" id="client-number" />
+            <label for="socials">INSPO LINK: </label>
+            <input type="url" name="inspo" id="client-inspo" />
+            <label for="comment">COMMENTS: </label>
+            <textarea name="comment" id="client-comment"></textarea>
+            <input type="submit" value="Create" />
+        </form>
     </section>
+
+    
 
 
   </body>
