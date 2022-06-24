@@ -26,6 +26,14 @@ const eventLocationLoc = couplesBanner.querySelector(".event-location")
 
 
 
+
+const modal = document.getElementById("myModal");
+const span = document.getElementsByClassName("close")[0];
+const modalImage = document.querySelector("#modal-image")
+
+
+
+
 fetch('http://localhost:3000/eventComponents')
   .then(response => response.json())
   .then(showCoupleImages)
@@ -71,6 +79,11 @@ function showEventPhotos(array){
         cImage.class = "removable-photos"
         additionalPhotos.append(cDiv)
         cDiv.append(cImage)
+
+        cImage.addEventListener('click', ()=>{
+            modal.style.display = "block";
+            modalImage.src=photo
+        })
     })
 }
 
@@ -140,3 +153,22 @@ newClientFrm.addEventListener('submit', clickEvent => {
     newClientFrm.reset() 
 })
 
+
+
+
+
+
+
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}

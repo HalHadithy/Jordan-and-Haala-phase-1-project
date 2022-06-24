@@ -174,27 +174,73 @@ h4{
 
 #additional-photos img{
     position: relative;
-    max-height: 300px;
+    max-height: 200px;
     height: auto;
-    max-width: 400px;
+    max-width: 300px;
     width:auto;
     margin: 5px;
 }
 
-#additional-photos div:hover{
-    display: block;
-    width: 100%;
-}
-
-#additional-photos img:hover{
-    transition: 0.8s;
-    max-height: 1000px;
-    height: auto;
-    max-width: 100%;
-    width:auto;
-}
-
 /* -------- Finished additional photos styling -------- */
+
+
+
+
+/* ------------------------------------------------------
+                    Styling the modal   
+   ------------------------------------------------------ */
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 70%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  #modal-image{
+    display:block;
+    max-width: 80%; 
+    max-height: 600px;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;  
+}
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* -------- Finished modal styling -------- */
+
+
+
+
 
 
 /* ------------------------------------------------------
