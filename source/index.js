@@ -33,11 +33,12 @@ fetch('http://localhost:3000/eventComponents')
 
 
 function showCoupleImages(coupleDatabase){
-    
+    showDetailedInfo(coupleDatabase[0])
     coupleDatabase.forEach(createCoupleImage)
+
 }
 
-//creating the banner images for each Ramen place, and adding a click event to make the ramen 
+//creating the banner images for each event, and adding a click event to make the ramen 
 function createCoupleImage(e,index){
     console.log(carouselPhotos[index])
     carouselPhotos[index].src = e.eventPhotos [0]
@@ -53,7 +54,6 @@ function showDetailedInfo(e){
     eventDescriptionLoc.textContent = clientObject.eventDescription
     eventLocationLoc.textContent = clientObject.eventLocation
     showEventPhotos(clientObject.eventPhotos)
-    
 }
 
 function removeAllChildNodes(parent) {
@@ -63,24 +63,24 @@ function removeAllChildNodes(parent) {
 }
 
 
-
 function showEventPhotos(array){ 
     array.forEach((photo)=>{
         let cImage = document.createElement('img')
+        let cDiv = document.createElement('div')
         cImage.src = photo
         cImage.class = "removable-photos"
-        additionalPhotos.append(cImage)
+        additionalPhotos.append(cDiv)
+        cDiv.append(cImage)
     })
-
 }
 
 
 
 // Keep track of which image we're currently on in carousel
-let counter = 1;
+let counter = 0;
 
 // Grab image width so we know how much to move across screen
-const size = carouselImages[0].clientWidth;
+const size = (carouselImages[0].clientWidth* 0.25);
 
 // Start on first image - not duplicate(not #last-clone)
 // Move one photo forward
@@ -116,6 +116,7 @@ prevBtn.addEventListener('click', () => {
 }); 
 
 
+
 // Darkmode -- toggle CSS class to apply styling on btn click. 
 darkBtn.addEventListener('click', () => {
     darkBtn.classList.toggle('active');
@@ -136,8 +137,6 @@ newClientFrm.addEventListener('submit', clickEvent => {
         "inspo": newClientInspo.value,
         "comment": newClientComment.value
     }
-
     newClientFrm.reset() 
-
 })
 

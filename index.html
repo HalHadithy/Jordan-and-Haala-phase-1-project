@@ -14,13 +14,20 @@
     <!-- google font #2 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet"> 
+    <!-- font-family: 'Cormorant', serif; -->
+
 
     <!-- google font #3 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
     <!-- font-family: 'Gayathri', sans-serif; -->
+
+    <!-- google font #3 bold -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@700&display=swap" rel="stylesheet">
 
 
     <!-- google font #4 -->
@@ -32,6 +39,12 @@
     font-family: 'Montserrat Alternates', sans-serif;
     font-family: 'Mrs Saint Delafield', cursive; -->
 
+    <!-- google font #5 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap" rel="stylesheet">
+    <!-- font-family: 'Barlow Condensed', sans-serif; -->
+
     <script defer src="./source/index.js"></script>
   </head>
 
@@ -40,7 +53,7 @@
     <!-- let's put a banner up here -->
     <!-- I would also LOVE to try a drop-down menu -->
     <section class="header">
-        <h6>Jordan and Haala's Pretty Website</h6>
+        <h6>Events by Jordan and Haala</h6>
         <div>
             <!-- add the menu bar here, like we did with the happy poster -->
         </div>
@@ -48,7 +61,7 @@
     </section>
 
     <main>
-        <h1>Welcome to Our Website</h1>  
+        <h1></h1>  
     </main>
 
 
@@ -79,8 +92,8 @@
     <!-- Couples Info -->
     <section class="couples-details">
         <h4 class="event-name">Event Name</h4>
-        <p class="event-description">Event Description</p>
         <p1 class="event-location">Event Location</p1>
+        <p class="event-description">Event Description</p>
         <div id="additional-photos">
             <!-- Couples photos here, would like a hover option but that seems a but intense -->
         </div>
@@ -95,7 +108,7 @@
     <section class="form"> 
         <!-- New Client Form -->
         <form id="new-client">
-            <h4>REACH OUT TO US:</h4>
+            <h5>REACH OUT TO US:</h5>
             <label for="name">NAME: </label>
             <input type="text" name="name" id="client-name" />
             <label for="email">EMAIL: </label>
@@ -106,11 +119,38 @@
             <input type="url" name="inspo" id="client-inspo" />
             <label for="comment">COMMENTS: </label>
             <textarea name="comment" id="client-comment"></textarea>
-            <input type="submit" value="Create" />
+            <input id="create-button" type="submit" value="Submit" />
         </form>
     </section>
 
     
+
+    <section class="social-media">
+        <div class="socialholder">
+
+            <!-- library call for logos -->
+            <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+            <!-- hr is the line -->
+            <hr id="left">
+
+            <!-- a are the logos, target blank is to open in a new tab instead of changing the page -->
+            <a href="https://www.facebook.com/haala.alhadithy.1" target = "_blank">
+                <ion-icon class="social" name="logo-facebook"></ion-icon>
+            </a>
+        
+            <a href="https://www.facebook.com/haala.alhadithy.1" target = "_blank">
+                <ion-icon class="social " name="logo-tiktok"></ion-icon>
+            </a>
+
+            <a href="https://www.instagram.com/haalahadithy/" target = "_blank">
+                <ion-icon class="social" name="logo-instagram"></ion-icon>
+            </a>
+            <hr id="right">
+
+        </div>
+    </section>
 
 
   </body>

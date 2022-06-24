@@ -1,21 +1,24 @@
-/*
-Page styling ------------------------------------------------------
-*/
+/* ------------------------------------------------------
+                        Page styling 
+   ------------------------------------------------------ */ 
 
-    /* Remove default styling*/
+/* Remove default styling*/
 *{
     margin: 3;
     padding: 0;
     box-sizing: border-box;
-  }
+}
   
-
 .header {
     width: 100%;
     padding:20px 0;
     text-align: center;
-    background:#EFE1E1;
     color: #6A3F3F;
+    background-image: url("https://thumbs.dreamstime.com/z/watercolor-hand-painted-card-green-eucalyptus-leaves-white-peony-banner-healing-herbs-cards-wedding-invitation-165599266.jpg");
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px; 
 }
 
 h1{
@@ -24,27 +27,42 @@ h1{
     font-size: 20px;
 }
 
-h4{
-    font-size: 20px;
-}
-
 h6{
     /* google font 2 */
-    font-family: 'Mrs Saint Delafield', cursive;
-    font-size: 50px;
-    margin-top: 0px;
+    font-family: 'Tangerine', cursive;
+    font-size: 90px;
+    margin-top: 120px;
     margin-bottom: 10px;
 }
-p{
-    font-size: 18px;
+
+label {
+    padding-top: 2px;
+}
+/*   -------- Page styling  --------  */
+
+
+
+
+
+/* ------------------------------------------------------
+                    Styling the form   
+   ------------------------------------------------------ */ 
+
+h5{
+    font-size: 25px;
+    margin: 0px;
 }
 
-p1{
-    font-size: 14px;
+.form{
+    border: 0.8rem solid #EFE1E1;
+    padding: 10px;
+    margin: 40px;
+    margin-top: 190px;
 }
 
 form {
     margin: 2rem 0;
+    margin-left: 40%;
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -52,85 +70,182 @@ form {
     font-family: 'Gayathri', sans-serif;
 }
 
-label {
-    padding-top: 2px;
-}
-
-.couples-details{
-    font-family: 'Gayathri', sans-serif;
-    text-transform: uppercase;
-}
-
-
-
-  /*
-Page styling ------------------------------------------------------
-*/
-
-
-
-/*
-  Applying styling to slider
-  */
-  
-  .carousel-container{
+#create-button{
+    margin-top: 10px;
+    width: 100px;
+    height: 25px;
+    background: linear-gradient(to bottom, #6A3F3F 0%,#543232 100%);
+    border: none;
+    border-radius: 6px;
     position: relative;
-    height: 500px;
-    width: auto;
-    margin: auto;
-    padding: 10px;
-    overflow: hidden;
+    color: #fbfbfb;
+    font-weight: 600;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
   }
-  img.event-photos{
-    max-width: 400px;
+
+ /* -------- Finished form styling -------- */
+
+
+/* ------------------------------------------------------
+                    Styling the slider   
+   ------------------------------------------------------ */ 
+
+.carousel-container{
+    position: relative;
+    height: 300px;
+    width: auto;
+    margin-top: 100px;
+    padding: 10px 0px 10px 35px ;
+    overflow: hidden;
+}
+
+img.event-photos{
+    max-width: 250px;
     object-fit: cover;
     width: auto;
     height: 100%;
-  }
-  .carousel-slide{
+}
+
+.carousel-slide{
     display: flex;
     width: auto;
     height: 100%;
-  }
+}
 
-  .carousel-buttons {
+.carousel-buttons {
     position: center;
-    
-  }
-  /*
-  Finished slider styling
-  */
+    margin-left: 35px;
+}
+
+button {
+    margin: 20px;
+    width: 100px;
+    height: 25px;
+    background: linear-gradient(to bottom, #6A3F3F 0%,#543232 100%);
+    border: none;
+    border-radius: 6px;
+    position: relative;
+    color: #fbfbfb;
+    font-weight: 600;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+  /*  -------- Finished slider styling  -------- */
 
 
-/*
-  Applying styling to additional photos
-  */
 
+
+/* ------------------------------------------------------
+         Styling detailed info / additional photos   
+   ------------------------------------------------------ */
+
+.couples-details{
+    border: 0.8rem solid #EFE1E1;
+    padding: 35px;
+    margin: 12px;
+    margin-top: 100px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 25px;
+    color: #455249;
+    text-transform: uppercase;
+}
+
+h4{
+    font-family: 'Gayathri', sans-serif;
+    font-size: 30px;
+    font-weight: 2000;
+    margin: 0px;
+}
+
+.event-location{
+    font-size: 16px;
+    color: #455249;
+}
+
+#additional-photos {
+    display: inline-flex;
+    flex-wrap:wrap;
+}
 
 #additional-photos img{
     position: relative;
     max-height: 300px;
+    height: auto;
+    max-width: 400px;
+    width:auto;
     margin: 5px;
-
 }
 
-/*
-Finished additional photos styling
-*/
+#additional-photos div:hover{
+    display: block;
+    width: 100%;
+}
+
+#additional-photos img:hover{
+    transition: 0.8s;
+    max-height: 1000px;
+    height: auto;
+    max-width: 100%;
+    width:auto;
+}
+
+/* -------- Finished additional photos styling -------- */
 
 
+/* ------------------------------------------------------
+                    Styling the socials   
+   ------------------------------------------------------ */
+  
+.social-media {
+    margin: 60px 40px;
+}
+
+.socialholder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;    
+}    
+
+.social{
+    color: #565656;
+    font-size: 20px;
+}
+
+.social:hover {
+    color: #990000;
+    transition: color 0.8s;
+}
+
+#left{
+    width:25%;
+    text-align:left;
+    margin:0;
+    color:#565656"
+}
+
+#right{
+    width:25%;
+    text-align:right;
+    margin:0;
+    color:#565656
+}
 
 
+  /* -------- Finished socials styling -------- */
 
+
+    /* ------------------------------------------------------
+                Applying styling for dark mode   
+     ------------------------------------------------------ */ 
   
-  
-  
-  
-  /*
-  Applying styling for dark mode
-  */
-  
-  #dark-change{
+#dark-change{
     position: absolute;
     width: 45px;
     height: 22px;
@@ -138,9 +253,9 @@ Finished additional photos styling
     top: 20px;
     border: 2px solid #6A3F3F;
     border-radius: 20px;
-  }
+}
   
-  #dark-change::before{
+#dark-change::before{
     position: absolute;
     content: "";
     width: 20px;
@@ -151,19 +266,52 @@ Finished additional photos styling
     cursor: pointer;
     background: #6A3F3F;
     transition: 0.4s;
-  }
+}
   
-  #dark-change.active::before{
+#dark-change.active::before{
     left: 24px;
     background-color: #fff;
-  }
+}
   
-  body.night{
-    background: #000;
+body.night{
+    background: #2D2027;
     color: #EFE1E1;
-  }
+}
+
+body.night .header{
+    width: 100%;
+    padding:20px 0;
+    text-align: center;
+    color: #EFE1E1;
+    background-image: url("Photos2/pngfind.com-peony-png-677797.png");
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px; 
+}
+body.night .couples-details{
+    color: #EFE1E1;
+}
+
+body.night .event-location{
+    color: #EFE1E1;
+}
+
+body.night h6{
+    margin-top: 130px;
+    margin-bottom: 10px;
+    color: #EFE1E1;
+}
+
+body.night .social{
+    color: #EFE1E1;
+}
+body.night .social:hover {
+    color: #990000;
+    transition: color 0.8s;
+}
   
-  #night-mode-button {
+#night-mode-button {
     background-color: #6A3F3F;
     color: #EFE1E1;
     padding: 5px;
@@ -171,13 +319,5 @@ Finished additional photos styling
     border: none;
     cursor: pointer;
     border-radius: 5px;
-  }
-
-
-  /*
-  Finished styling for dark mode
-  */
-  
-  
-  
-
+}
+  /* -------- Finished styling for dark mode -------- */
